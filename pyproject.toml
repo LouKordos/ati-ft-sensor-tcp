@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ati-ft-sensor-tcp-loukordos"
+name = "ati_ft_sensor_tcp"
 version = "0.0.1"
 authors = [
   { name="Loukas Kordos", email="placeholder@example.com" },
