@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "ati_ft_sensor_tcp"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
   { name="Loukas Kordos", email="placeholder@example.com" },
 ]
