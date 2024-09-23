@@ -75,8 +75,8 @@ class ATIForceTorqueSensor:
             # Byte array, see ATI NetFT docs for structure
             # TODO: Refactor to use struct.unpack
             header = response_data[0:HEADER_LENGTH].hex()
-            force_units = int.from_bytes(response_data[HEADER_LENGTH], signed=False) # uint8
-            torque_units = int.from_bytes(response_data[HEADER_LENGTH+1], signed=False) # uint8
+            force_units = response_data[HEADER_LENGTH] # uint8
+            torque_units = response_data[HEADER_LENGTH+1] # uint8
             counts_per_force = int.from_bytes(response_data[HEADER_LENGTH+2:HEADER_LENGTH+2+4], signed=True) # int32
             counts_per_torque = int.from_bytes(response_data[HEADER_LENGTH+2+4:HEADER_LENGTH+2+4+4], signed=True) # int32
             self.logger.info(f"force_units={force_units}, torque_units={torque_units}, counts_per_force={counts_per_force}, counts_per_torque={counts_per_torque}")
