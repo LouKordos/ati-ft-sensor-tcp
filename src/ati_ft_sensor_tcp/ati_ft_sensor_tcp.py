@@ -101,8 +101,8 @@ class ATIForceTorqueSensor:
     
     def zero_sensor(self) -> None:
         F, T = self.get_data(raw=True)
-        self.F_bias = F
-        self.T_bias = T
+        self.F_bias = F.copy()
+        self.T_bias = T.copy()
 
     
     def get_data(self, raw=False) -> Tuple[List[float]|None, List[float]|None]:
