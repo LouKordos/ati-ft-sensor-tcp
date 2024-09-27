@@ -32,7 +32,7 @@ class ATIForceTorqueSensor:
         if self.enable_logging:
             logging.basicConfig(level=loglevel)
         else:
-            self.logger.getLogger().addHandler(logging.NullHandler())
+            self.logger.addHandler(logging.NullHandler())
 
     def __enter__(self):
         start = time.perf_counter_ns()
